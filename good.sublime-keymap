@@ -1,0 +1,43 @@
+  // custom vim-ish navigation, but with i north, WASD-style
+  { "keys": ["ctrl+i"], "command": "move", "args": { "by": "lines", "forward": false } },
+  { "keys": ["ctrl+j"], "command": "move", "args": { "by": "characters", "forward": false } },
+  { "keys": ["ctrl+k"], "command": "move", "args": { "by": "lines", "forward": true } },
+  { "keys": ["ctrl+l"], "command": "move", "args": { "by": "characters", "forward": true } },
+  
+  // switch panes
+  { "keys": ["alt+j"], "command": "focus_group", "args": { "group": 0 } },
+  { "keys": ["alt+l"], "command": "focus_group", "args": { "group": 1 } },
+  // switch tabs
+  { "keys": ["alt+i"], "command": "next_view_in_stack" },
+  { "keys": ["alt+k"], "command": "prev_view_in_stack" },
+
+  // move beginning/end of line
+  { "keys": ["ctrl+h"], "command": "move_to", "args": {"to": "bol", "forward": true}},
+  { "keys": ["ctrl+;"], "command": "move_to", "args": {"to": "eol", "forward": false}},
+
+  // move by word
+  { "keys": ["ctrl+u"], "command": "move", "args": {"by": "words", "forward": false}},
+  { "keys": ["ctrl+o"], "command": "move", "args": {"by": "words", "forward": true}},
+
+  // move by page
+  { "keys": ["ctrl+alt+i"], "command": "move", "args": {"by": "pages", "forward": false}},
+  { "keys": ["ctrl+alt+k"], "command": "move", "args": {"by": "pages", "forward": true}},
+
+  // move and select
+  { "keys": ["ctrl+shift+l"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true}},
+  { "keys": ["ctrl+shift+j"], "command": "move", "args": {"by": "characters", "forward": false, "extend": true}},
+  { "keys": ["ctrl+shift+i"], "command": "move", "args": {"by": "lines", "forward": false, "extend": true}},
+  { "keys": ["ctrl+shift+k"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true}},
+
+  // move and select words
+  { "keys": ["ctrl+shift+u"], "command": "move", "args": {"by": "words", "forward": false, "extend":true}},
+  { "keys": ["alt+shift+o"], "command": "move", "args": {"by": "words", "forward": true, "extend":true}},
+
+  // move and select pages
+  { "keys": ["ctrl+alt+shift+i"], "command": "move", "args": {"by": "pages", "forward": false, "extend": true}},
+  { "keys": ["ctrl+alt+shift+k"], "command": "move", "args": {"by": "pages", "forward": true, "extend": true}},
+
+  // move beginning/end of line and select
+  // TODO: would change this over to j and l instead, but my system keeps logging out
+  { "keys": ["alt+shift+h"], "command": "move_to", "args": {"to": "bol", "forward": true, "extend": true}},
+  { "keys": ["alt+shift+;"], "command": "move_to", "args": {"to": "eol", "forward": false, "extend": true}},
